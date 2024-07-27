@@ -26,8 +26,10 @@ it.start()
 #pin 7 trig
 echo = board.get_pin('d:6:i')
 trig = board.get_pin('d:7:o')
-
-print(echo.read()==False)
+trig.write(True)
+time.sleep(0.001)
+trig.write(False)
+print(echo.read())
 # print(trig.read())
 # print(trig.write(True))
 # while True:
