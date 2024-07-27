@@ -27,20 +27,30 @@ it.start()
 echo = board.get_pin('d:6:i')
 trig = board.get_pin('d:7:o')
 
-print(trig.read())
-print(trig.write(True))
-while True:
-    time.sleep(0.5)
-    trig.write(True)
-    time.sleep(0.00001)
-    trig.write(False)
-    while echo.read() == False:
-        print("first")
-        start = timer()
-        if echo.read() == True:
-            print("last")
-            end = timer()
-            print(f"start: {start:.8f} | end: {end:.8f}")
-            duration = end - start
-            distance = (duration * 0.000343) /2
-    print(f"Distance: {distance:.3f}")
+print(echo.read()==False)
+# print(trig.read())
+# print(trig.write(True))
+# while True:
+#     #clear trig pin
+#     trig.write(False)
+#     board.pass_time(0.00002)
+
+#     trig.write(True)
+#     board.pass_time(0.00001)
+#     trig.write(False)
+#     limit_start = time.time()
+#     echo.read(True)
+#     while echo.read() == True:
+#         if time.time() - limit_start > 1:
+#             break
+#         pass
+#     start = timer()
+#     while echo.read() == True:
+#         pass
+
+#     end = timer()
+#     duration = end - start
+#     distance = (duration * 34300) /2
+#     print(f"start: {start:.8f} | end: {end:.8f} | Duration: {duration}")
+#     print(f"Distance: {distance:.3f}")
+   
