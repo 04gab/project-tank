@@ -1,4 +1,5 @@
 import cv2
+import imutils
 img = cv2.imread('assets/LEGO_logo.png', 1)
 img = cv2.resize(img, (400, 400))
 
