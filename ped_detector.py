@@ -31,6 +31,6 @@ while cap.isOpened():
         # Showing the output Image
         cv2.imshow("Image", gray)
         if cv2.waitKey(1) == ord("q"):
-            break
+            break 
 cap.release()
 cv2.destroyAllWindows()
