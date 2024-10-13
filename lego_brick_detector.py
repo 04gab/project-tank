@@ -24,7 +24,7 @@ print(torchvision.__version__)
 path = kagglehub.dataset_download("joosthazelzet/lego-brick-images")
 
 print("Path to dataset files:", path)
-#%%
+
 image_folder = 'C:/Users/04gab/Documents/GitHub/project-tank/2x2 brick images'  # Change this path to your folder of images
 if not os.path.exists(image_folder):
     print(f"Directory does not exist: {image_folder}")
